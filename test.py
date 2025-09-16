@@ -1,19 +1,9 @@
-name = input("Enter your name: ")
-try:
-    salary_hour = float(input("Enter your hourly salary: "))
-except ValueError:
-    print("Invalid input for hourly salary. Please enter a numeric value.")
-    exit(1)
+n1 = int(input("Enter the first number: "))
+n2 = int(input("Enter the second number: "))
 
-try :
-    hours_worked = int(input("Enter the number of hours worked : "))
-except ValueError:
-    print("Invalid input for hours worked. Please enter an integer value.")
-    exit(1)
-
-if hours_worked > 40:
-    salary = (40 * salary_hour) + ((hours_worked - 40) * salary_hour * 1.5)
+if (n1>0 and n2>0) or (n1<0 and n2<0):
+    print("Product is positive")
+elif (n1>0 and n2<0) or (n1<0 and  n2>0):
+    print("Product is negative")
 else:
-    salary = hours_worked * salary_hour
-
-print(f"Hello {name}, your salary is {salary} DH.")
+    print("Product is zero")
